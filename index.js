@@ -465,8 +465,7 @@ micromatch.braces = (pattern, options) => {
  */
 
 micromatch.braceExpand = (pattern, options) => {
-  if (typeof pattern !== 'string') throw new TypeError('Expected a string');
-  return micromatch.braces(pattern, { ...options, expand: true });
+//FIXME: Looks like is not use by jest https://github.com/advisories/GHSA-f8q6-p94x-37v3 remove as a temporal fix.
 };
 
 /**
