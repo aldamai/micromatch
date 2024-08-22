@@ -453,11 +453,7 @@ micromatch.parse = (patterns, options) => {
  */
 
 micromatch.braces = (pattern, options) => {
-  if (typeof pattern !== 'string') throw new TypeError('Expected a string');
-  if ((options && options.nobrace === true) || !hasBraces(pattern)) {
-    return [pattern];
-  }
-  return braces(pattern, options);
+  throw new TypeError('Removed due vulnerability');
 };
 
 /**
@@ -465,7 +461,7 @@ micromatch.braces = (pattern, options) => {
  */
 
 micromatch.braceExpand = (pattern, options) => {
-//FIXME: Looks like is not use by jest https://github.com/advisories/GHSA-f8q6-p94x-37v3 remove as a temporal fix.
+  throw new TypeError('Removed due vulnerability');
 };
 
 /**
